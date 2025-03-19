@@ -1,0 +1,46 @@
+header {
+  
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+header nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2A5326;
+  padding-left: calc((1903px - 1440px) / 2);
+  padding-right: calc((1903px - 1440px) / 2);
+}
+header nav h1 {
+  
+}
+header nav h1 a {
+  
+  color: white;
+}
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+header nav ul li {
+  
+  font-size: 15px;
+}
+header nav ul li a {
+  
+  color: white;
+}
+header nav ul i {
+  
+}
+header nav ul i a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/svg/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
+}
+header nav ul input {
+  
+}/*# sourceMappingURL=header.css.map */

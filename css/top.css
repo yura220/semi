@@ -1,0 +1,25 @@
+.top{
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    background-color: #fff8;
+    padding: 10px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    border-radius: 8px;
+}
+.top::before{
+    content:"";
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/svg/chevron-up-solid.svg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+.xs{
+    font-size: 12px;
+}
