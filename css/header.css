@@ -43,4 +43,51 @@ header nav ul i a {
 }
 header nav ul input {
   
-}/*# sourceMappingURL=header.css.map */
+}
+/* 상단 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+/* 기본 체크박스 숨김 */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* 토글 스위치 스타일 */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #072413;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+/* 토글 버튼 (움직이는 원) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* 체크됐을 때 스타일 */
+input:checked + .slider {
+  background-color: #072413;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
