@@ -1,0 +1,403 @@
+/* 기본 라이트모드 */
+body {
+  background-color: white;
+  color: #222;
+}
+
+body div {}
+
+body>div#title {
+  background-image: url(../img/main.jpg);
+  height: 920px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.title-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #049260;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.title-btn:hover {
+  background-color: #2A5326;
+}
+
+body div.main {
+  position: absolute;
+  inset: 340px 0 0 349px;
+  line-height: 1;
+}
+
+div.main h2.jua-regular {
+  font-size: 65px;
+  position: relative;
+  z-index: 10;
+}
+
+div h2>span {
+  font-size: 65px;
+  color: #049260;
+}
+
+div.main h2.jua-regular::after {
+  content: "";
+  width: 290px;
+  height: 12px;
+  background-color: #E9C46B;
+  position: absolute;
+  z-index: -1;
+  left: 240px;
+  top: 110px;
+}
+
+div p {
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+main {}
+
+#cuisine {
+  position: relative;
+  /*! margin: 0 auto; */
+  overflow: hidden;
+}
+
+#cuisine div .form{position: absolute;
+  top: 330px;
+  width: 100%;}
+
+#cuisine div>ul {
+  padding-top: 50px;
+}
+
+#cuisine div.wrap ul {
+  display: flex;
+  gap: 60px;
+}
+
+#cuisine div ul li.icon {
+  width: 190px;
+  height: 190px;
+  border-radius: 20px;
+  background-color: #EDE6D6;
+  position: relative;
+}
+
+#cuisine div ul li.icon a::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+#cuisine div ul li.color {
+  background-color: #F4E1C1;
+}
+
+#cuisine div ul li.icon:nth-child(1) a::after {
+  background-image: url(../img/svg/korean-food.svg);
+}
+
+#cuisine div ul li.icon:nth-child(2) a::after {
+  background-image: url(../img/svg/western-style.svg);
+}
+
+#cuisine div ul li.icon:nth-child(3) a::after {
+  background-image: url(../img/svg/Chinese-food.svg);
+}
+
+#cuisine div ul li.icon:nth-child(4) a::after {
+  background-image: url(../img/svg/Japanese-style.svg);
+}
+
+#cuisine div ul li.icon:nth-child(5) a::after {
+  background-image: url(../img/svg/dessert.svg);
+}
+
+#cuisine div ul li.icon:nth-child(6) a::after {
+  background-image: url(../img/svg/beverages.svg);
+}
+
+#cuisine div ul li.icon a {
+  color: #887F6B;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+
+#cuisine div.card {
+  box-sizing: border-box;
+  margin-left: calc((100vw - 1440px - 17px) / 2 );
+}
+
+#cuisine div.card::before {
+  content: "";
+  background-image: url(../img/svg/puppy_r.svg);
+  display: block;
+  width: 123px;
+  height: 112px;
+  position: absolute;
+  right: 300px;
+  z-index: 80;
+}
+#cuisine span.box{width: ((100vw - 1440px - 17px) / 2 );}
+#cuisine div.card ul {
+}
+
+#cuisine div.card ul li {
+  width: 702px;
+  height: 452px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  background-color: #F6F5F3;
+  border-radius: 20px;
+  margin: 46px 20px 0 20px;
+}
+
+#cuisine div.card ul li::before {
+  content: "";
+  width: 351px;
+  height: 452px;
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+#cuisine div.card ul li:nth-child(1)::before {
+  background-image: url(../img/svg/Tailor.svg);
+  background-color: #E9C46A;
+  border-radius: 20px 0 0 20px;
+}
+
+#cuisine div.card ul li:nth-child(2)::before {
+  background-image: url(../img/svg/worry.svg);
+  background-color: #E76F51;
+  border-radius: 20px 0 0 20px;
+}
+
+#cuisine div.card ul li:nth-child(3)::before {
+  background-image: url(../img/svg/my-recipe.svg);
+  background-color: #F4A261;
+  border-radius: 20px 0 0 20px;
+}
+
+#cuisine div.card ul li h2.h2 {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: end;
+  color: #000;
+}
+
+#cuisine div.card ul p.p {
+  display: flex;
+  align-items: center;
+  color: #3e3e3e;
+}
+
+#cuisine div.card ul p.btn15 a {
+  color: #252525;
+  display: inline-flex;
+  gap: 20px;
+  line-height: 1;
+  align-items: baseline;
+}
+
+#cuisine div.card ul p.btn15 a::after {
+  content: "";
+  background-image: url(../img/svg/arrow_forward_ios_24dp.svg);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-size: contain;
+  line-height: 1;
+}
+
+#cuisine div.card ul p.btn15 {
+  display: inline-block;
+  color: #252525;
+  line-height: 1;
+}
+
+#recipe {
+
+  background-color: #FEF9ED;
+  position: relative;
+  z-index: auto;
+}
+
+#recipe .wrap {}
+
+#recipe .wrap h2 {
+
+  align-self: baseline;
+}
+
+#recipe .wrap .form {}
+
+#recipe .wrap .form::before {
+  content: "";
+  background-image: url(../img/svg/together.svg);
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 125px;
+  background-size: cover;
+  right: 260px;
+  top: 25px;
+}
+
+#recipe .wrap .form ul.popularity {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+#recipe ul.popularity li {
+
+  margin-bottom: 20px;
+}
+
+#recipe ul.popularity li .imgbox {
+
+  width: 345px;
+  height: 248px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+#recipe div.heart {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff5;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-size: 50%;
+}
+
+.heart {
+  display: inline-block;
+  background: url(../img/svg/heart2.svg);
+}
+
+.heart.active {
+  display: inline-block;
+  background-image: url(../img/svg/heart1.svg);
+}
+
+#recipe li .imgbox .heart {}
+
+#recipe ul.popularity li .imgbox a {
+
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+#recipe ul.popularity li .imgbox a img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#recipe ul.popularity li .name {
+
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 5px 0;
+}
+
+#recipe ul.popularity li .name h3.h6 {}
+
+#recipe ul.popularity li .name h3.h6 a {}
+
+#recipe ul.popularity li .name span {
+
+  display: flex;
+  gap: 10px;
+}
+
+#recipe ul.popularity li .name span p.p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#recipe ul.popularity li .name span p.p.pan {
+
+  order: 1;
+}
+
+#recipe ul.popularity li .name span::after {
+  content: "│";
+  order: 2;
+  color: #b1b1b1;
+}
+
+#recipe ul.popularity li .name span p.p.clock {
+
+  order: 3;
+}
+
+#recipem ul.popularity li .name span p::before {
+  content: "";
+  background-image: url(../img/svg/pan.svg);
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#recipe ul.popularity li .sm {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#recipe ul.popularity li .sm .stars {}
+
+#recipe ul.popularity li .sm a.star {}
+
+#recipe ul.popularity li .sm p {
+
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#recipe ul.popularity li .sm p a.sm {
+
+  color: #646464;
+}

@@ -1,0 +1,36 @@
+section#recipe {
+  width: 1px;
+}
+section#recipe div {
+  width: 1px;
+}
+section#recipe div h2 {
+  width: 1px;
+}
+section#recipe div div.wrap {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li h3 {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li h3 a {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li img {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li p {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li p.sm {
+  width: 1px;
+}
+section#recipe div div.wrap ul.popularity li p.sm a {
+  width: 1px;
+}

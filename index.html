@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새미네부엌</title>
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 주아폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- Specialist slick.js -->
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+    <script>
+        // 슬릭-------------------------------
+        $(document).ready(function () {
+            $('.slick_slider').slick({
+                slidesToScroll: 2,        // 한 번에 1개씩 이동
+                autoplay: false,           // 자동 재생
+                speed: 0,              // 이동 속도
+                cssEase: 'linear',        // 일정한 속도
+                infinite: false,           // 무한 반복
+                arrows: false,            // 좌우 버튼 숨김
+                dots: false,              // 도트 네비 숨김
+                variableWidth: true,      // 슬라이드마다 너비 다르게 설정 가능
+                draggable: true,       // 마우스 드래그 허용
+                swipe: true,           // 터치 스와이프 허용
+                touchMove: true,       // 터치 드래그 허용
+            });
+        });
+    </script>
+    <script>
+  $(document).ready(function () {
+    // 인기레시피 하트 토글
+    $('#recipe ul.popularity li').hover(function () {
+      $(this).find('.heart').stop().fadeIn(200);
+    }, function () {
+      $(this).find('.heart').stop().fadeOut(200);
+    });
+
+    $('#recipe .imgbox .heart').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active'); // ✅ 클릭한 그 요소만 toggle
+    });
+
+    // 푸터 사업자정보 버튼
+    $('footer div.left ul.info li:nth-child(2) a').click(function () {
+      $('footer div.info_drop').slideToggle();
+      return false;
+    });
+
+    // ✅ 다크모드 토글
+    const toggle = document.getElementById('darkModeToggle');
+    if (toggle) {
+      // 저장된 테마 적용
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+      }
+
+      // 토글 이벤트
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  });
+</script>
+</head>
+
+<body>
+    <!-- 상단 -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <h1>새미네부엌</h1>
+            </a>
+            <ul>
+                <li><a href="">레시피</a></li>
+                <li><a href="">냉장고파먹기</a></li>
+                <li><a href="">커뮤니티</a></li>
+                <li><a href="">장보기</a></li>
+                <li><a href="">마이페이지</a></li>
+                <i><a href=""></a></i>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </ul>
+        </nav>
+    </header>
+    <!-- 타이틀 -->
+    <!-- 타이틀 -->
+    <div id="title">
+        <div class="main">
+            <h2 class="jua-regular"><span>새미네 부엌</span>과 함께라면,
+                <br>요리가 더 쉬워집니다!
+            </h2>
+            <p>요리가 어려운가요? 걱정마세요!
+                <br>간단한 레시피, 맞춤형 추천, 다양한 요리 팁까지
+                <br>새미네 부엌과 함께라면 누구나 쉽게 요리할 수 있어요.
+            </p>
+            <a href="event.html" class="title-btn">이벤트 보러가기</a>
+        </div>
+    </div>
+    <!-- 본문메인 -->
+    <main>
+        <section id="cuisine">
+            <div class="wrap flex-column-center">
+                <ul>
+                    <li class="icon"><a href="">한식</a></li>
+                    <li class="icon color"><a href="">양식</a></li>
+                    <li class="icon"><a href="">중식</a></li>
+                    <li class="icon color"><a href="">일식</a></li>
+                    <li class="icon"><a href="">디저트</a></li>
+                    <li class="icon color"><a href="">음료</a></li>
+                </ul>
+                <div class="form">
+                    <div class="card">
+                        <span class="box"></span>
+                        <ul class="slick_slider">
+                            <li class="slick_box">
+                                <h2 class="h2">있는 재료로 뚝딱!
+                                    <br>맞춤형 레시피 추천
+                                </h2>
+                                <p class="p">냉장고 속 재료를 입력하면 AI가 딱 맞는
+                                    <br>요리를 찾아드려요.
+                                </p>
+                                <p class="btn15"><a href="">레시피찾기</a></p>
+                            </li>
+                            <li class="slick_box">
+                                <h2 class="h2">나만의 레시피
+                                    <br>저장하고 공유하세요!
+                                </h2>
+                                <p class="p">맛있는 순간을 기록하고, 나만의 요리 노트를
+                                    <br>만들어보세요.
+                                </p>
+                                <p class="btn15"><a href="">무료 회원가입하기</a></p>
+                            </li>
+                            <li class="slick_box">
+                                <h2 class="h2">오늘 뭐 먹지?
+                                    <br>고민은 이제 끝!
+                                </h2>
+                                <p class="p"> 재료, 테마, 난이도까지 원하는 요리를
+                                    <br>바로 찾아보세요.
+                                </p>
+                                <p class="btn15"><a href="">요리 시작하러 가기</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="recipe">
+            <div class="wrap flex-column-center">
+                <h2 class="h1">요즘 가장 인기 있는 레시피!</h2>
+                <div class="form">
+                    <ul class="popularity">
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">닭다리살 샐러드 볼</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">20분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(625) 조회수 1,269</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">소고기 치즈 버거</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">40분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(631) 조회수 982</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">어니언 하와이안 피자</a></h3>
+                                <span>
+                                    <p class="p pan">중급</p>
+                                    <p class="p clock">60분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(754) 조회수 1,003</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">닭가슴살 미트볼</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">30분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(925) 조회수 1,569</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">생선 카레</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">40분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(834) 조회수 937</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">새우 오일 파스타</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">30분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(961) 조회수 1,861</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGtvcmVhJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">동죽 술국</a></h3>
+                                <span>
+                                    <p class="p pan">중급</p>
+                                    <p class="p clock">30분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(671) 조회수 1,072</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <div class="heart"></div>
+                                <a href=""><img
+                                        src="https://images.unsplash.com/photo-1546453570-d2fcacdafbb2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTE4fHxmb29kfGVufDB8fDB8fHww"
+                                        alt=""></a>
+                            </div>
+                            <div class="name">
+                                <h3 class="h5"><a href="">페퍼로니 맥앤치즈</a></h3>
+                                <span>
+                                    <p class="p pan">초급</p>
+                                    <p class="p clock">20분</p>
+                                </span>
+                            </div>
+                            <div class="sm">
+                                <div class="stars">
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                    <a href="#" class="star"></a>
+                                </div>
+                                <p><a class="sm" href="">(986) 조회수 1,951</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="inner submenu wrap">
+            <div class="left">
+                <ul class="link">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이용가이드</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+                <ul class="info">
+                    <li><a href="">샘표식품(주)</a></li>
+                    <li><a class="drop" href="">사업자정보</a></li>
+                </ul>
+                <div class="info_drop">
+                    대표이사: 박진선<br>
+                    사업자 번호: 446-87-00473<br>
+                    주소 : 서울특별시 중구 충무로2 (우편번호 : 04557)
+                </div>
+                <p class="capy xs gray">Copyright &copy; 샘표식품, All Rights Reserved.</p>
+            </div>
+            <div class="right">
+                <ul class="sns">
+                    <li class="logo_award">
+                        <img src="https://semie.cooking/assets/images/common/logo_award.png?v=0.1" alt="">
+                    </li>
+                    <li>
+                        <a class="snslogo" href="">인스타그램</a>
+                    </li>
+                    <li>
+                        <a class="snslogo" href="">카카오톡</a>
+                    </li>
+                    <li class="site_map">
+                        <a href=""><button class="btn16" type="button" onclick="">관련사이트</button></a>
+                        <div class="site_list">
+                            <ul>
+                                <li><a href="#">샘표 기업</a></li>
+                                <li><a href="#">새미네부엌 플랫폼</a></li>
+                                <li><a href="#">티·아시아</a></li>
+                                <li><a href="#">새미네부엌</a></li>
+                                <li><a href="#">폰타나</a></li>
+                                <li><a href="#">샘표 채용</a></li>
+                                <li><a href="#">샘표 통합회원 웹사이트</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a class="top" href="">맨위로 가기</a>
+    </footer>
+</body>
+
+</html>

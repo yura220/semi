@@ -1,0 +1,93 @@
+/* 다크모드 */
+/* 전체 배경 및 기본 텍스트 */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* 헤더, 푸터, 카드 등 원하는 요소별 스타일 */
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .card,
+body.dark-mode .form {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* 링크 색상 조정 */
+body.dark-mode a {
+  color: #ddd;
+}
+
+/* 이미지 테두리/그림자 등 조정 (선택사항) */
+body.dark-mode img {
+  filter: brightness(0.9);
+}
+
+body.dark-mode #cuisine div ul li.icon {
+  width: 190px;
+  height: 190px;
+  border-radius: 20px;
+  background-color: #887e6e;
+  position: relative;
+}
+
+body.dark-mode #cuisine div ul li.color {
+  background-color: #e2caa0;
+}
+
+body.dark-mode #cuisine div ul li.icon a {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+
+body.dark-mode #recipe{
+  background-color: #2f2d27;
+}
+
+body.dark-mode #recipe .wrap .form ul.popularity{
+  background-color: #2f2d27;
+}
+
+body.dark-mode .heart {
+  z-index: 10;
+}
+
+body.dark-mode #title p:nth-child(3){
+  color: #eee;
+}
+
+body.dark-mode #season .desc{
+  color: #eee;
+}
+
+body.dark-mode #season h2{
+  color: #049260;
+}
+
+body.dark-mode #season h2 span{
+  color: #00c680;
+}
+
+body.dark-mode #season .right h3{
+  color: #049260;
+}
+
+body.dark-mode #season .right h3 span{
+  color: #00c680;
+}
+
+body.dark-mode #season button{
+  border-color: #049260;
+  color: #049260;
+}
+
+body.dark-mode #mission h2,
+body.dark-mode #guide h2 {
+  color: #049260;
+}

@@ -1,0 +1,381 @@
+#title{
+  height: 100vh;
+}
+
+#title .wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title .small{
+  color: #717171;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+#title h2{
+  font-size: 48px;
+  font-weight: 800;
+}
+
+#title p:nth-child(3){
+  color: #252525;
+  font-size: 23px;
+  letter-spacing: 0.8px;
+}
+
+#title .imgbox{
+  width: 100%;
+  height: 576px;
+  margin-top: 40px;
+}
+
+#title .imgbox .img{
+  background-image: url(../img/title.jpg);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+#season{
+  height: 100vh;
+}
+
+#season .wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#season .wrap::before{
+  content: '';
+  display: block;
+  width: 241px;
+  height: 201px;
+  position: absolute;
+  background-image: url(../img/bg-heart.png);
+  right: 150px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 210px;
+}
+
+#season .small{}
+
+#season h2{
+  color: #1F3D2B;
+  font-weight: 800;
+  font-size: 48px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+#season h2 span{
+  font-size: 48px;
+}
+
+#season .desc{
+  color: #252525;
+  width: fit-content;
+  font-size: 19px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#season .desc span{
+  color: #E76F51;
+}
+
+#season .grid{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 596px;
+  width: 100%;
+}
+
+#season .left{
+  background-image: url(../img/card.png);
+  background-size: contain;
+  margin-top: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#season .right{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#season .right h3{
+  margin-top: 200px;
+  font-size: 30px;
+  color: #1F3D2B;
+  font-weight: 800;
+}
+
+#season .right h3 span{
+  color: #2A5326;
+}
+
+#season .right p{
+  font-size: 14px;
+}
+
+#season .right p:nth-child(1){}
+
+#season .right p:nth-child(2){}
+
+#season button{
+  margin-top: 20px;
+  width: 154px;
+  height: 50px;
+  border: 1px solid #1F3D2B;
+  background-color: transparent;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #2A5326;
+  cursor: pointer;
+}
+
+#season button::after{
+  content: '';
+  width: 11px;
+  height: 18px;
+  display: block;
+  background-image: url(../img/svg/chevron-right-solid.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#mission{
+  height: 100vh;
+}
+
+#mission .wrap{
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mission h2{
+  font-size: 30px;
+  color: #2A5326;
+  font-weight: 800;
+}
+
+#mission .m_box{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+
+#mission .m_box .m-wrap{
+  width: 314px;
+  height: 452px;
+  background-color: #FFFCF5;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mission .m_box h3{
+  background-color: #1F3D2B;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#mission .m_box h4{
+  text-align: center;
+  font-weight: 700;
+}
+
+#mission .m-wrap:nth-child(1) .m-imgbox{
+  background-image: url(../img/m1.png);
+  height: 346px;
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mission .m-wrap:nth-child(2) .m-imgbox{
+  height: 260px;
+  background-image: url(../img/m2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mission .m-wrap:nth-child(3) .m-imgbox{
+  height: 260px;
+  background-image: url(../img/m3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mission .m-wrap:nth-child(4) .m-imgbox{
+  height: 245px;
+  background-image: url(../img/m4.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#mission .m_box .m-wrap:nth-child(1) .m-img{
+}
+#mission .m_box .m-wrap:nth-child(2) .m-img{}
+#mission .m_box .m-wrap:nth-child(3) .m-img{}
+#mission .m_box .m-wrap:nth-child(4) .m-img{}
+
+#mission .m_box.m-img{}
+
+#mission .m_box>div p{
+  text-align: center;
+  font-size: 14px;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mission .call{
+  width: 954px;
+  height: 190px;
+  border: 2px dashed #9DBD9A;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#mission .c-img{
+  background-image: url(../img/call.png);
+  width: 93px;
+  height: 93px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#mission .call ul{
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+#mission .call li{}
+
+#mission .call li p{
+  font-size: 16px;
+}
+
+#mission .call li p span{
+  font-weight: 700;
+}
+
+#guide {
+  height: 100vh;
+}
+
+#guide .wrap {
+  height: 100%;
+  width: 779px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 0;
+  box-sizing: border-box;
+}
+
+#guide h2 {
+  font-size: 30px;
+  color: #2A5326;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#guide .t-wrap {
+  font-size: 16px;
+}
+
+#guide .g-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1px 0;
+}
+
+#guide h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#guide .g-date p {}
+
+#guide .t-wrap p {}
+
+#guide .light{
+  color: #929292;
+}
+
+#guide .flex {}
+
+#guide .Prizes {
+  padding: 40px 0;
+}
+
+#guide .Prizes li {
+  padding: 10px 0;
+}
+
+#guide .Prizes li h4 {}
+
+#guide .Prizes li p {
+  padding-top: 7px;
+  font-size: 16px;
+}
+
+#guide p {
+  font-size: 16px;
+}
+
+#guide .btn-box{
+  display: flex;
+  justify-content: center;
+}
+
+#guide button {
+  width: 332px;
+  height: 50px;
+  border: 0;
+  background-color: #2A5326;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 40px;
+}
